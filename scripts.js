@@ -1,3 +1,6 @@
+// // Material Select Initialization
+// $('abc').selectpicker();
+
 function filter_button_func() {
 
   // var scenario1 = $("input[name='scenario']:checked").val(); // Big Home
@@ -35,5 +38,20 @@ function filter_button_func() {
       document.getElementById("card5").style.display = "none";
       document.getElementById("card6").style.display = "none";
   }
+
+  document.getElementById("bottom_nav_bar").style.display = "none";
+
+}
+
+function reset_button_func() {
+
+      document.getElementById("card1").style.display = "block";
+      document.getElementById("card2").style.display = "block";
+      document.getElementById("card3").style.display = "block";
+      document.getElementById("card4").style.display = "block";
+      document.getElementById("card5").style.display = "block";
+      document.getElementById("card6").style.display = "block";
+
+      document.getElementById("bottom_nav_bar").style.display = "block";
 
 }

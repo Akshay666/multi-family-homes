@@ -20,6 +20,28 @@
 
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
 
 </head>
 
@@ -27,6 +49,91 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-light bg-light static-top">
+
+          <!-- <a class="nav-link" href="#">Buy</a> -->
+          <div style="padding: 15px; display: inline-block;" class="form-group">
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <!-- <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> -->
+                Buy
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a data-value="action">Homes for sale</a></li>
+                <li><a data-value="another action">For sale by owner</a></li>
+                <li><a data-value="something else here">Multi-family</a></li>
+              </ul>
+            </div>
+            <script>
+                $(".dropdown-menu li a").click(function()
+                {
+                  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+                  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+                });
+            </script>
+          </div>
+
+          <div style="padding: 15px; display: inline-block;" class="form-group">
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <!-- <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> -->
+                Rent
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a data-value="action">Rental buildings</a></li>
+                <li><a data-value="another action">Apartments for rent</a></li>
+                <li><a data-value="something else here">Rent by owner</a></li>
+              </ul>
+            </div>
+            <script>
+                $(".dropdown-menu li a").click(function()
+                {
+                  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+                  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+                });
+            </script>
+          </div>
+
+          <div style="padding: 15px; display: inline-block;" class="form-group">
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <!-- <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> -->
+                Sell
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a data-value="action">Get zestimate</a></li>
+                <li><a data-value="another action">Seller's guide</a></li>
+                <li><a data-value="something else here">Find agents</a></li>
+              </ul>
+            </div>
+            <script>
+                $(".dropdown-menu li a").click(function()
+                {
+                  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+                  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+                });
+            </script>
+          </div>
+          <!--
+          <div style="padding: 15px; display: inline-block;">
+            <select class="selectpicker">
+              <option btn-default>Buy</option>
+              <option>Homes for sale</option>
+              <option>For sale by owner</option>
+              <option>Multi-family</option>
+            </select>
+          </div> -->
+
+          <!-- <a class="nav-link" href="#">Rent</a> -->
+
+          <!-- <a class="nav-link" href="#">Sell</a> -->
+
+
     <div class="container">
       <a class="navbar-brand" href="#">Zillow</a>
       <a class="btn btn-primary" href="#">Sign In</a>
@@ -43,7 +150,7 @@
           <h1 class="mb-5">Find your way home!</h1>
         </div>
 
-        <div>
+        <!-- <div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
           <label class="form-check-label" for="inlineRadio1">Buy</label>
@@ -64,13 +171,13 @@
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option5" checked>
           <label class="form-check-label" for="inlineRadio5">Buy Multi-family</label>
         </div>
-      </div>
+      </div> -->
 
       <p>
 
 
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form action="search_results.html">
+          <form action="search_results2.html">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
                 <input class="form-control form-control-lg" placeholder="Seattle, WA">
